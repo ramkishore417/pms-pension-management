@@ -7,10 +7,10 @@ phases:
     commands:
       - echo Logging in to Amazon ECR...
       - aws --version
-      - ...
-      - IMAGE_NAME=practice-jpa
+      - aws ecr get-login-password --region ap-south-1 | docker login --username AWS --password-stdin 860061945305.dkr.ecr.ap-south-1.amazonaws.com
+      - IMAGE_NAME=ecr-ramkishore-pmsportal
       - IMAGE_URI=
-      - CONTAINER_NAME=practice-jpa
+      - CONTAINER_NAME=ecs-ramkishore-pmsportal
   build:
     commands:
       - echo Build started on `date`

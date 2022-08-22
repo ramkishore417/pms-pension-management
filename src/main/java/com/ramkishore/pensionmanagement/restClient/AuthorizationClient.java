@@ -10,10 +10,10 @@ import org.springframework.web.bind.annotation.RequestHeader;
 @FeignClient(name = "authorization-service", url = "${AUTHORIZATION_SERVICE_URI : http://localhost:8001}")
 public interface AuthorizationClient {
 
-	@PostMapping("/authenticate")
+	@PostMapping("/api/authorization/authenticate")
 	public String generateToken(@RequestBody AuthRequest authRequest) throws Exception;
 
-	@GetMapping("/authorize")
+	@GetMapping("/api/authorization/authorize")
 	public Boolean authorization(@RequestHeader("Authorization") String token);
 
 }

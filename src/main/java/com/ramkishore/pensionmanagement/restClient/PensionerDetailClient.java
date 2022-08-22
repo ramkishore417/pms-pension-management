@@ -10,10 +10,10 @@ import java.util.List;
 @FeignClient(name = "pensioner-detail", url = "${PENSIONER_DETAIL_URI : http://localhost:8002}")
 public interface PensionerDetailClient {
 
-	@GetMapping("/allPensionerDetails")
+	@GetMapping("/api/pensionerdetail/allPensionerDetails")
 	public List<PensionerDetail> getAllPensionerDetails();
 
-	@GetMapping("/allTransactionDetails")
+	@GetMapping("/api/pensionerdetail/allTransactionDetails")
 	public List<PensionTransactionDetail> getAllPensionTransactionDetails();
 
 }

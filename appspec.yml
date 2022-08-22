@@ -3,9 +3,9 @@ Resources:
   - TargetService:
       Type: AWS::ECS::Service
       Properties:
-        TaskDefinition: "arn:aws:ecs:ap-south-1:555918697305:task-definition/pensioner-detail-microservice:32"
+        TaskDefinition: "arn:aws:ecs:ap-south-1:860061945305:task-definition/ecs-ramkishore-pmsportal:1"
         LoadBalancerInfo:
-          ContainerName: "pension-management-portal"
+          ContainerName: "ecs-ramkishore-pmsportal"
           ContainerPort: "8000"
 
         PlatformVersion: "LATEST"

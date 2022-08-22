@@ -11,11 +11,11 @@ import org.springframework.web.bind.annotation.RequestHeader;
 @FeignClient(name = "process-pension", url = "${PROCESS_PENSION_URI : http://localhost:8003}")
 public interface ProcessPensionClient {
 
-	@PostMapping("/ProcessPension")
+	@PostMapping("/api/processpension/ProcessPension")
 	public ProcessPensionResponse calculatePensionAmount(@RequestHeader(name = "Authorization") String token,
 			@RequestBody ProcessPensionInput processPensionInput);
 
-	@PostMapping("/ProcessPensionTransaction")
+	@PostMapping("/api/processpension/ProcessPensionTransaction")
 	public boolean saveTransactionDetail(@RequestHeader(name = "Authorization") String token,
 			@RequestBody PensionTransactionDetail transactionDetail);
 

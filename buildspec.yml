@@ -9,7 +9,7 @@ phases:
       - aws --version
       - aws ecr get-login-password --region ap-south-1 | docker login --username AWS --password-stdin 860061945305.dkr.ecr.ap-south-1.amazonaws.com
       - IMAGE_NAME=ecr-ramkishore-pmsportal
-      - IMAGE_URI=
+      - IMAGE_URI=860061945305.dkr.ecr.ap-south-1.amazonaws.com/ecr-ramkishore-pmsportal:latest
       - CONTAINER_NAME=ecs-ramkishore-pmsportal
   build:
     commands:

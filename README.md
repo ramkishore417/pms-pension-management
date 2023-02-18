@@ -1,4 +1,6 @@
 # Pension Management System | Pension Management Portal
+The Pension Management System allows members to login and access the Pensioner detail module. The ProcessPension microservice calculates the pension amount based on Aadhaar and salary data, then returns the pension detail to the UI. The system stores pensioner detail, pension amount, and bank transaction data in a database.
+
 ## Functional Requirements
 The Pension Management System is a web-based solution that enables users to manage their pension plans. The ProcessPension microservice is a crucial component of the system and is responsible for processing pension details based on the member's Aadhar number. The member can log in to the portal and provide the pensioner detail, which is then validated by the microservice. If the pensioner detail is accurate, the pension amount is calculated and displayed on the UI. The processed pension detail is then stored in the database.
 

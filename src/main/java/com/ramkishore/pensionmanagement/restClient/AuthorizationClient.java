@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestHeader;
 
-@FeignClient(name = "authorization-service", url = "http://localhost:8001")
+@FeignClient(name = "authorization-service", url = "http://host.docker.internal:8001")
 public interface AuthorizationClient {
 
 	@PostMapping("/authenticate")

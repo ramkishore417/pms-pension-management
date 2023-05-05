@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 import java.util.List;
 
-@FeignClient(name = "pensioner-detail", url = "http://localhost:8002")
+@FeignClient(name = "pensioner-detail", url = "http://host.docker.internal:8002")
 public interface PensionerDetailClient {
 
 	@GetMapping("/allPensionerDetails")
